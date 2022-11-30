@@ -7,14 +7,20 @@ wheel>=0.29
 # data science
 numpy
 pandas
-scikit-learn
+
+# ph17_doc_sort key dependencies
+neo4j-driver
+ne04j
+# pyDataverse
+
+
 
 # tests/linter
-black
-coverage
-flake8
-pytest
-yapf
+# black
+# coverage
+# flake8
+# pytest
+# yapf
 
 # API
 gcsfs

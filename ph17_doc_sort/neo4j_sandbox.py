@@ -1,3 +1,6 @@
+# !pip install neo4j
+# !pip install neo4j-driver
+
 from neo4j import GraphDatabase
 
 class Neo4jConnection:

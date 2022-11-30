@@ -1,0 +1,7 @@
+
+
+we use the split out data from the many documents we processed
+we use the categorisation to record relationships between the "concepts" and "document subtitles" and their content
+we use python to automatically establish this information into a graph database, which will be the really powerful bit
+the graph database can absorb further relationships and adapt to new factors that we think are important
+all this is already automated

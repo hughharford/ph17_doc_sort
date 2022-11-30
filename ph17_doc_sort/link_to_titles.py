@@ -2,11 +2,25 @@ from get_word_content import GetWordContent
 
 
 concept_list = [
-    "Risk",
-    "Environment",
-    "Sustainability",
+    "Business Continuity",
+    "Commissioning",
+    "Communication",
+    "Commercial",
+    "Design",
+    "Digital Construction",
+    "Environmental",
+    "Framework Management",
+    "Health & Safety",
     "Procurement",
-    "Experience"
+    "Planning",
+    "Project Management",
+    "Quality",
+    "Risk Management",
+    "Soft Landings",
+    "Staff",
+    "Stakeholder Management",
+    "Supply Chain",
+    "Sustainability"
 ]
 
 class LinkToTitles:

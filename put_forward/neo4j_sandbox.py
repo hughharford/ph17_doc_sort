@@ -1,3 +1,6 @@
+# !pip install neo4j
+# !pip install neo4j-driver
+
 from neo4j import GraphDatabase
 
 class Neo4jConnection:
@@ -16,13 +19,13 @@ class Neo4jConnection:
         if self.__driver is not None:
             self.__driver.close()
 
-    def query(self, query, db=None):
+    def query(self, query, parameters=None, db=None):
         assert self.__driver is not None, "Driver not initialized!"
         session = None
         response = None
         try:
             session = self.__driver.session(database=db) if db is not None else self.__driver.session()
-            response = list(session.run(query))
+            response = list(session.run(query, parameters))
         except Exception as e:
             print("Query failed:", e)
         finally:
@@ -30,5 +33,15 @@ class Neo4jConnection:
                 session.close()
         return response
 
+    def get_conn(self):
+        # returns connection to db
+        conn = Neo4jConnection(uri="bolt://44.192.127.122:7687",
+                            user="neo4j",
+                            pwd="sunday-cheeses-cells")
+        return conn
 
-conn = Neo4jConnection(uri="bolt://44.192.127.122:7687", user="neo4j", pwd="sunday-cheeses-cells")
+if __name__ == "__main__":
+    print("if this is the only message showing, the db connection works")
+    conn = Neo4jConnection(uri="bolt://44.192.127.122:7687",
+                    user="neo4j",
+                    pwd="sunday-cheeses-cells")
